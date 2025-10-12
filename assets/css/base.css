@@ -1,0 +1,78 @@
+/* 
+* Luôn dùng kích thước rem cho font-size
+* VD : 1.2rem <=> 12px nha 
+*      1rem <=> 10px 
+* Sử dụng màu thì dùng var();
+* VD muốn sử dụng màu chủ đạo thì var(--primary-color)
+* VD muốn sử dụng trắng thì var(--white-color) 
+*  tui định nghĩa màu cơ bản  ở bên dưới rồi , sử dụng cho nó tiện.
+*/
+:root{
+    --primary-color: #33cccc; 
+    --white-color: #fff;
+    --text-color:#333;
+    --border-color :#dbdbdb;
+    --black-color:#000;
+}
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+.grid{
+    width: 1200px ;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width {
+    width :100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px ;
+    margin-right: -5px ;
+}
+.grid__column-12{
+    padding-left: 5px ;
+    padding-right: 5px ;
+    width: 100% ;
+}
+.grid__column-2-4{
+    padding-left: 5px ;
+    padding-right :5px ;
+    width: 20%;
+}
+.app-container{
+}
+.btn{
+    height :34px ;
+    min-width: 124px ;
+    text-decoration: none ;
+    border: none ;
+    border-radius: 2px ;
+    font-size : 1.6rem ;
+    padding :0 12px ; 
+    outline : none ;
+    color : var(--text-color);
+    cursor : pointer ;
+    display :inline-flex ;
+    justify-content : center ;
+    align-items : center ;
+    line-height: 1.6rem ;
+    background-color: var(--primary-color);
+}
+.home-product-item__buy-btn{
+    color: var(--white-color);
+    border-radius: 4px ;
+    margin: 4px 0 6px;
+    transform: translateX(42.5%);
+}
+.home-product-item__buy-btn:hover{
+       background-color: #5fcbd1;
+}
