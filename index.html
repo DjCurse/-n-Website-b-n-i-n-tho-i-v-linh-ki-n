@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="assets\css\main.css">
     <link rel="stylesheet" href="assets\css\base.css">
     <link rel="stylesheet" href="assets\font\fontawesome-free-7.1.0-web\css\all.min.css">
+
+    <style>
+        /* Breadcrumb */
+        .breadcrumb {
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .breadcrumb span {
+            color: #555;
+        }
+    </style>
+    
 </head>
 <body>
     <div class="app">
@@ -26,6 +42,12 @@
             <div class="grid">
                 <div class="grid__row ap__content">
                     <div class="grid__column-12">
+
+                          <!-- BREADCRUMB -->
+                        <div class="breadcrumb" id="breadcrumb">
+                            <a href="#">Trang chủ</a>
+                        </div>
+                        
                     <!-- Home filter -->
                         <div class="home-filter">
                             <div class="home-filter__brand">
@@ -217,5 +239,24 @@
         </div>
 
     </div>
+
+    <!-- Script breadcrumb -->
+    <script>
+        const breadcrumb = document.getElementById("breadcrumb");
+        document.querySelectorAll(".home-product-item").forEach(item => {
+            item.addEventListener("click", e => {
+                e.preventDefault();
+                const brand = item.dataset.brand || "Sản phẩm";
+                const name = item.dataset.name || "Chi tiết";
+                breadcrumb.innerHTML = `
+                    <a href="#">Trang chủ</a> &gt; 
+                    <a href="#">${brand}</a> &gt; 
+                    <span>${name}</span>
+                `;
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+    </script>
+
 </body>
 </html>
