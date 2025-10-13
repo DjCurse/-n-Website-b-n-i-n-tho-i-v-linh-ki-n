@@ -1,0 +1,109 @@
+:root {
+  --blue-light: #33cccc;
+  --blue-dark: #66cccc;
+  --gray-light: #f5f5f5;
+  --gray-dark: #eeeeee;
+  --white: #ffffff;
+  --black: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--gray-light);
+  color: var(--black);
+}
+
+.header {
+  background-color: var(--blue-dark);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.nav a {
+  color: var(--white);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav a.active,
+.nav a:hover {
+  background-color: var(--blue-light);
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background-color: var(--white);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  margin-bottom: 1rem;
+  color: var(--blue-dark);
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+.invoice-table thead {
+  background-color: var(--blue-light);
+  color: var(--white);
+}
+
+.invoice-table tbody tr:nth-child(even) {
+  background-color: var(--gray-dark);
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status.delivered {
+  background-color: #28a745;
+}
+
+.status.pending {
+  background-color: #ffc107;
+}
+
+.status.cancelled {
+  background-color: #dc3545;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--blue-dark);
+  color: var(--white);
+  margin-top: 2rem;
+}

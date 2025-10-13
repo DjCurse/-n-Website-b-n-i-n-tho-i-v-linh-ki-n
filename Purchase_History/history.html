@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch sử mua hàng</title>
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Mobile-city</div>
+      <nav class="nav">
+        <!-- Thêm link vào sau -->
+        <a href="">Trang chủ</a>
+        <a href="">Giỏ hàng</a>
+        <a href="" class="active">Lịch sử mua hàng</a>
+        <a href="">Tài khoản</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1 id="historyTitle">Lịch sử mua hàng</h1>
+      <table class="invoice-table">
+        <thead>
+          <tr>
+            <th>Mã hóa đơn</th>
+            <th>Ngày</th>
+            <th>Khách hàng</th>
+            <th>Sản phẩm</th>
+            <th>Thành tiền</th>
+            <th>Trạng thái</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ví dụ dữ liệu tĩnh -->
+          <tr>
+            <td>HD00123</td>
+            <td>05/10/2025</td>
+            <td>Phạm Minh Duy</td>
+            <td>Redmi Note 12 5G</td>
+            <td>5.200.000₫</td>
+            <td class="status delivered">Đã giao</td>
+          </tr>
+          <tr>
+            <td>HD00124</td>
+            <td>07/10/2025</td>
+            <td>Phạm Minh Duy</td>
+            <td>Iphone 15 Pro</td>
+            <td>18.900.000₫</td>
+            <td class="status pending">Đang xử lý</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer class="footer">
+      &copy; 2025 Mobile-city. All rights reserved.
+    </footer>
+  </body>
+</html>
