@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop UI (HTML+CSS)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header: giao diện, chưa có JS -->
+    <header>
+      <div class="logo">SGU Shop</div>
+      <div class="search">
+        <input
+          type="search"
+          placeholder="Tìm sản phẩm... (UI mẫu, chưa có chức năng)"
+        />
+        <img class="search-logo" src="Shop.png" alt=" logo shop">
+    </header>
+
+    <!-- Thanh chip lọc (chỉ là UI) -->
+    <nav class="subbar">
+      <div class="subbar-inner">
+        <div class="chip">Tất cả</div>
+        <div class="chip">Phụ kiện</div>
+        <div class="chip">Móc Khóa</div>
+        <div class="chip">Ốp Lưng</div>
+      </div>
+    </nav>
+
+    <!-- Layout 2 cột: danh sách + giỏ hàng (UI tĩnh) -->
+    <main class="wrapper">
+      <section aria-label="Danh sách sản phẩm">
+        <div class="grid">
+          <!-- PRODUCT CARD mẫu 1 (dùng khối màu làm ảnh đại diện) -->
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://imgs.search.brave.com/hl87dsHim4C8AQpAycEj2cJgCl-xD__xaS3Zot3Xkco/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZi5z/aG9wZWUudm4vZmls/ZS9zZy0xMTEzNDIw/MS0yMjEwMC1pcGs4/ZDdscmh1aXZkZA"
+              alt="Ốp Lưng PikaPi"
+            />
+            <div class="content">
+              <h3 class="title">Ốp Lưng PiKaPi</h3>
+              <p class="meta">Dành cho Iphone 13,Thiết kế hiện đại tươi trẻ</p>
+              <p class="meta">Bảo Hành 6 Tháng</p>
+              <div class="price">500.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+
+          <!-- PRODUCT CARD mẫu 2 (minh họa dùng <img>) -->
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://imgs.search.brave.com/NsDadcJKWh-vrS9L3t2lZavmXnODMBmFbYzsLs1qmjc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZi5z/aG9wZWUudm4vZmls/ZS9zZy0xMTEzNDIw/MS0yMjEwMC1hYWFp/N2ZtenM5aXY1Mg"
+              alt="Op lung SamSung S25"
+            />
+            <div class="content">
+              <h3 class="title">Op lung MeoTwo</h3>
+              <p class="meta">Chất Lượng chống đạt tiêu chuẩn</p>
+              <p class="meta">chống va đạp thay đổi</p>
+
+              <div class="price">500.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://mipow.op-lung-mipowvn/-lux-cho-samsung-galaxy-s25-series/"
+              alt=" OP lung S25"
+            />
+
+            <div class="content">
+              <h3 class="title">Bàn phím cơ 87 phím</h3>
+              <p class="meta">Switch Blue, LED trắng</p>
+              <div class="price">890.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://imgs.search.brave.com/uekYhODwkAibEgn2kKdiTSjw7pb6axazElHxUFvF47M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90ZW1r/aW1sb2FpLmNvbS52/bi93cC1jb250ZW50/L3VwbG9hZHMvMjAy/NC8wOS9NbyVDQyU4/MWMta2hvYSVDQyU4/MS1raW0tbG9hJUND/JUEzaS1obyVDQyU5/QiVDQyVBM3Ata2lt/LWtlJUNDJTgzbS0y/NDYuanBn"
+              alt="Chuột không dây"
+            />
+            <div class="content">
+              <h3 class="title">Móc Khóa Điện Thoại Dễ Thương</h3>
+              <p class="meta">Bền ,Nhẹ</p>
+              <div class="price">100.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://imgs.search.brave.com/TdTN9URB9vY-akTBdDWCd2rbpZyhr6F3Lv20QUVUI7M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0LmhzdGF0aWMu/bmV0LzEwMDAzMDk1/NTQvcHJvZHVjdC9t/b2Mta2hvYS1nby12/bjA0Ml9jY2JkOTA1/MTMyNzg0N2Y0OGE5/ZjMwYjhkNDJjM2Ex/NF9sYXJnZS5qcGc"
+              alt=" Moc Khoa Viet Nam"
+            />
+            <div class="content">
+              <h3 class="title">Móc Khóa Hình Việt Nam</h3>
+              <p class="meta">Gỗ cao cấp ,Chất liệu hoàn thiện tốt</p>
+              <div class="price">149.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              class="thumb-img"
+              src="https://imgs.search.brave.com/eL7F0RnkCYKqZzfEsFCxubSDUQU5r-c9M-iOFy-ORCQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aW50/dWMuZGllbnRob2Fp/Z2lha2hvLnZuL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzA5/L2RheS1zYWMtaXBo/b25lLWJhby1uaGll/dS10aWVuLnBuZw"
+              alt="Ổ cắm 3 ổ + 2 USB"
+            />
+            <div class="content">
+              <h3 class="title">Dây sạc C to C Iphone</h3>
+              <p class="meta">Chính Hãng ,Bền,Tối ,Bảo Hành 6 tháng</p>
+              <div class="price">300.000 ₫</div>
+            </div>
+            <div class="actions">
+              <div class="btn">Chi tiết</div>
+              <div class="btn primary">Thêm vào giỏ</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside aria-label="Giỏ hàng (UI tĩnh)">
+        <div class="cart-title">🛒 Giỏ hàng</div>
+        <div class="cart-list">
+          <div class="cart-item">
+            <div class="thumb-sm">Ốp Lưng</div>
+            <div>
+              <div class="ci-name">Ốp Lưng Pikapi</div>
+              <div class="ci-meta">500.000 ₫ · số lượng: 1</div>
+            </div>
+            <div class="ci-meta">500.000 ₫</div>
+          </div>
+          <div class="cart-item">
+            <div class="thumb-sm">Móc Khóa</div>
+            <div>
+              <div class="ci-name">Móc Khóa Hình Việt Nam</div>
+              <div class="ci-meta">149.000 ₫ · số lượng: 2</div>
+            </div>
+            <div class="ci-meta">298.000 ₫</div>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="row"><span>Tạm tính</span><span>798.000 ₫</span></div>
+          <div class="row"><span>Phí ship</span><span>20.000 ₫</span></div>
+          <div class="row" style="font-size: 18px">
+            <span>Tổng cộng</span><span>818.000 ₫</span>
+          </div>
+          <div class="checkout">
+            <div class="btn">Lưu giỏ</div>
+            <div class="btn primary">Thanh toán</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>© 2025 SGU Shop — Giao diện minh họa (không có chức năng)</footer>
+  </body>
+</html>
