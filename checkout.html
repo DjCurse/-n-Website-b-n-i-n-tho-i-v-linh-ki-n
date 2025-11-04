@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh Toán</title>
+<style>
+    /* Toàn trang căn giữa */
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* Khung checkout */
+    .checkout-container {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    /* Phương thức thanh toán */
+    .payment-method {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        background: #f1f1f1;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .payment-method:hover {
+        background: #e0e0e0;
+    }
+
+    .payment-method input {
+        margin-right: 15px;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    .pay-btn {
+        padding: 12px 25px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    .pay-btn:hover {
+        background: #218838;
+    }
+</style>
+</head>
+<body>
+
+<div class="checkout-container">
+    <h2>Chọn phương thức thanh toán</h2>
+
+    <label class="payment-method">
+        <input type="radio" name="payment" checked>
+        Thẻ ngân hàng
+    </label>
+    <label class="payment-method">
+        <input type="radio" name="payment">
+        Ví MoMo
+    </label>
+    <label class="payment-method">
+        <input type="radio" name="payment">
+        Thanh toán khi nhận hàng (COD)
+    </label>
+
+    <button class="pay-btn" id="payBtn">Thanh toán ngay</button>
+</div>
+
+<script>
+    const payBtn = document.getElementById("payBtn");
+
+    payBtn.addEventListener("click", () => {
+        const selected = document.querySelector('input[name="payment"]:checked');
+        alert("Thanh toán thành công!\nPhương thức: " + selected.nextSibling.textContent.trim());
+        window.location.href = "nhap.html"; // Quay về trang chính
+    });
+</script>
+
+</body>
+</html>

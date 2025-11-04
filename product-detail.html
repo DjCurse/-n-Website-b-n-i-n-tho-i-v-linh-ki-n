@@ -1,0 +1,45 @@
+ <!--  Khung chi tiết sản phẩm -->
+    <div id="product-detail" style="display:none; padding:20px;">
+
+    <!--  Bố cục  -->
+    <div style="display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap;">
+        
+        <!-- Ảnh sản phẩm -->
+        <div style="flex:1; min-width:250px; text-align:center;">
+            <img id="detail-image" src="" alt="Hình sản phẩm" 
+                 style="width:100%; max-width:300px; height:auto; border-radius:10px;">
+        </div>
+
+        <!-- Thông tin sản phẩm -->
+        <div style="flex:2; min-width:250px;">
+            <h2 id="detail-name" style="margin-bottom:10px;"></h2>
+            <p><strong>Thương hiệu:</strong> <span id="detail-brand"></span></p>
+            <p><strong>Giá:</strong> <span id="detail-price"></span></p>
+            <p><strong>Tồn kho:</strong> <span id="detail-stock"></span></p>
+            <p><strong>Mô tả:</strong></p>
+           <p id="detail-description" style="text-align:justify; line-height:1.6;">
+            </p>
+
+           <!-- Nút mua ngay -->
+            <button class="btn home-product-item__buy-btn" 
+            style="margin-top:10px; padding:8px 16px; border:none; background:#28a745; color:white; border-radius:5px; cursor:pointer;">
+            🛒 Mua Ngay
+            </button>
+
+
+            <button id="add-cart-btn" 
+                        style="padding:8px 16px; border:none; background:#ff9800; color:white; border-radius:5px; cursor:pointer;">
+                    🛍️ Thêm vào giỏ hàng
+                </button>
+
+            <button id="back-btn" 
+                    style="margin-top:10px; padding:6px 12px; border:none; background:#007bff; color:white; border-radius:5px; cursor:pointer;">
+                ← Quay lại
+            </button>
+        </div>
+    </div>
+
+    <!-- Sản phẩm liên quan -->
+    <h3 style="margin-top:40px;">Sản phẩm liên quan</h3>
+    <div id="related-products" class="grid__row"></div>
+</div>
