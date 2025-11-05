@@ -8,9 +8,9 @@ html {
     --text-color:#333;
     --border-color :#dbdbdb;
     --black-color:#000;
-    --font-small: 1rem;   /* 10px */
-    --font-medium: 1.2rem; /* 12px */
-    --font-large: 1.6rem;  /* 16px */
+    --font-small: 1rem;   
+    --font-medium: 1.2rem; 
+    --font-large: 1.6rem;  
 }
 
 body {
@@ -134,6 +134,16 @@ body {
     text-decoration: underline;
 }
 
+/*tắt icon hiển thị ẩn pass
+/* tắt icon hiển thị pass trên Chrome, Edge, Safari */
+input[type="password"]::-webkit-password-toggle-button {
+    display: none;
+}
+/* tắt icon hiển thị pass trên Edge cũ */
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
 /* Form quên và đặt lại mật khẩu */
 #form-forgot, #form-reset {
     max-width: 400px;
@@ -143,3 +153,309 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px 2px var(--primary-color);
 }
+
+/* =================== profile.html =================== */
+/* Body + wrapper căn giữa màn hình */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--white-color);
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.page-container.profile {
+    max-width: 500px;
+    width: 90%;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 0 15px 2px var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Title */
+.page-container.profile h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form */
+#profileForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#profileForm label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-medium);
+    color: var(--text-color);
+    gap: 10px; 
+}
+
+#profileForm label span {
+    min-width: 100px; 
+    text-align: left;
+}
+
+#profileForm input {
+    width: 65%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    color: var(--text-color);
+}
+
+#profileForm input:disabled,
+#profileForm input[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* Form button */
+#profileForm button {
+    margin-top: 15px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: center;
+}
+
+#profileForm button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Footer buttons */
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.footer-buttons button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =================== (admin.html) =================== */
+/* ======== ADMIN PAGE ======== */
+.page-container.admin {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--text-color);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons button {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: var(--font-medium);
+    transition: all 0.2s;
+}
+
+.header-buttons button:hover {
+    background-color: #28a0a0;
+    transform: translateY(-1px);
+}
+
+/* BẢNG USER */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-medium);
+    table-layout: auto; /* auto để cột co giãn theo nội dung */
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    white-space: normal;    /* cho xuống dòng nếu dài */
+    overflow: visible;      /* hiển thị đầy đủ */
+    text-overflow: clip;    /* không cắt dấu ... */
+}
+
+/* Header bảng */
+table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+/* Nút trong bảng */
+#userTable button {
+    padding: 0.4rem 0.8rem;
+    font-size: var(--font-medium);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: var(--white-color);
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    margin: 2px;
+}
+
+/* Nút khóa */
+.lock-btn {
+    background-color: #FF6B6B;
+}
+
+.lock-btn:hover {
+    background-color: #FF4C4C;
+    transform: translateY(-1px);
+}
+
+/* Nút reset mật khẩu */
+.reset-btn {
+    background-color: #FFA500;
+}
+
+.reset-btn:hover {
+    background-color: #FF8C00;
+    transform: translateY(-1px);
+}
+
+/* Nút xóa */
+.delete-btn {
+    background-color: var(--primary-color);
+}
+
+.delete-btn:hover {
+    background-color: #28a0a0;
+    transform: translateY(-1px);
+}
+
+/* Hover trên hàng bảng */
+#userTable tr:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+
+/* =================== home.html =================== */
+.page-container.home {
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px 2px var(--primary-color);
+}
+
+.page-container.home h1 {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.page-container.home button {
+    padding: 0.8rem 1.5rem;
+    font-size: var(--font-medium);
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 250px;
+}
+
+.page-container.home button:hover {
+    background-color: #28a0a0;
+    transform: translateY(-1px);
+}
+
+#homeForm {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Tắt style autofill trên Chrome/Edge/Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset; /* giữ background trắng */
+    -webkit-text-fill-color: #333; /* màu chữ giữ nguyên */
+    transition: background-color 5000s ease-in-out 0s; /* tránh nháy nền */
+}
+

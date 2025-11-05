@@ -1,0 +1,31 @@
+<!--Trang thay đổi thông tin người dùng -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="page-container profile">
+      <h1>Thông tin cá nhân</h1>
+      <form id="profileForm">
+        <label><span>Họ tên:</span> <input type="text" name="name"></label>
+        <label><span>Địa chỉ:</span> <input type="text" name="address"></label>
+        <label><span>SĐT:</span> <input type="tel" name="phone"></label>
+        <label><span>Ngày sinh:</span> <input type="date" name="birthday"></label>
+        <label><span>Số dư:</span> <input type="number" name="balance" step="0.01"></label>
+        <button type="submit">Cập nhật</button>
+      </form>
+      <div class="footer-buttons">
+        <button onclick="window.location.href='home.html'">Quay lại trang chủ</button>
+        <button onclick="logout()">Đăng xuất</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

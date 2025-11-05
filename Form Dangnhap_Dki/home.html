@@ -1,0 +1,17 @@
+<body>
+<div id="wrapper">
+  <div class="page-container home">
+    <h1>Trang mua hàng</h1>
+    <link rel="stylesheet" href="css/style.css">
+        <form id="homeForm"></form>
+    <button onclick="requireLogin();alert('Bắt đầu mua hàng');">Mua hàng</button>
+    <button onclick="window.location.href='profile.html'">Xem/Chỉnh sửa Profile</button>
+    <button onclick="logout()">Đăng xuất</button>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script>
+requireLogin();
+</script>
+</body>
